@@ -1,0 +1,31 @@
+<!-- Toggle Dark Mode challenge
+Task: When the button is clicked, toggle the background color between black and white. -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button> 
+
+<script>
+  function toggleDarkMode() 
+  // 
+  {
+    document.body.style.backgroundColor =   // by default bg color is white when set after set we check condition
+      document.body.style.backgroundColor === "white" ? "black" : "white";
+
+
+  }
+
+  /*
+  On the html ->
+  <Toggle Dark Mode> button
+    *background changes from white to black when clicked again it does the opposite
+  */
+</script>
+</body>
+</html>

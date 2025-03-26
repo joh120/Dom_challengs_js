@@ -1,0 +1,48 @@
+<!-- Create an Input Field and Display Input
+ Task: Dynamically create an input field and a submit button. When the user types something and clicks submit, display the input value in an <h3>. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="inputContainer"></div>
+<button onclick="createInput()">Create Input</button>
+<h3 id="output"></h3>
+
+<script>
+  function createInput() { 
+    // creates a input field with a placeholder value of "type something" 
+    // whenever button Create input is clicked 
+    let inputField = document.createElement("input");
+    inputField.id = "userInput";
+    inputField.placeholder = "Type something";
+
+    // cretes a submit buuton 
+    let submitBtn = document.createElement("button");
+    submitBtn.textContent = "Submit";
+    submitBtn.onclick = function () 
+    // stores the value of the input field and dynamically populates it with the 
+    // string "You entered + value" to the page
+    {
+      let value = document.getElementById("userInput").value;
+      document.getElementById("output").textContent = "You entered: " + value;
+    };
+
+    document.getElementById("inputContainer").appendChild(inputField); // append the inputField to the inputContainer div 
+    document.getElementById("inputContainer").appendChild(submitBtn);  // append the submitBtn to the inputContainer div
+  }
+  /*
+  On the html ->
+  <create input> button when pressed reveals the 
+  <text box> submit button after input a value by the user the 
+  value inputs is shown as
+  You entered: <e.g bottle> on the page
+
+  */
+</script>
+</body>
+</html>

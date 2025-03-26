@@ -1,0 +1,31 @@
+<!-- 
+ Challenge - Change Text Content
+
+ Task: Write JavaScript code that changes the text inside an <h1> tag with id="title" when clicking a button  -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <h1 id="title">Hello, World!</h1>
+  <button onclick="changeText()">Click Me</button> <!-- onclick eventhandler handles a click event -->
+  
+  <script>
+    function changeText() 
+    // This ensures that when we click on the button that the textcontent changes
+    {
+      document.getElementById("title").textContent = "You clicked the button!";
+    }
+    /* 
+    On the html ->
+    Hello World ! <click me> 
+    You clicked the button! <click me> 
+    */
+
+  </script>  
+ </body>
+ </html>

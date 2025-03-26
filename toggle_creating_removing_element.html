@@ -1,0 +1,46 @@
+<!-- Toggle Between Creating and Removing an Element
+Task: Create a button that toggles between adding and removing a <div>.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button onclick="toggleElement()">Toggle Element</button>
+<div id="container"></div>
+
+<script>
+  let isCreated = false;
+
+  function toggleElement() {
+    let container = document.getElementById("container");
+
+    if (!isCreated) // inverts the boolean value of isCreated 
+    // creates a new div and gives it the id dynamicDiv with textContent
+    // "i was created"
+    {
+      let newDiv = document.createElement("div");
+      newDiv.id = "dynamicDiv";
+      newDiv.textContent = "I was created!";
+      container.appendChild(newDiv); // appends newDiv elememt to our calender div as a child element
+    } else {
+      let existingDiv = document.getElementById("dynamicDiv"); // if isCreated is true so if newDiv already exists
+      if (existingDiv) existingDiv.remove(); // we use remove() to remove the newDiv element from the DOM
+    }
+
+    isCreated = !isCreated; // set False to True or True to False
+  }
+
+  /*
+  On the html ->
+  <ToggleElement>
+    "i was created" 
+    press button again and statement above is in essence deleted
+
+  */
+</script>
+</body>
+</html>
