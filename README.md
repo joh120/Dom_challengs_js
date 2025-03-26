@@ -4,7 +4,7 @@ Dom challenges
 
 1. Change text content - write JavaScript code that changes the text inside an 'h1' tag with id="title" when clicking a button.
 
-2. Add a new list item - Write JavaScript to add a new <li> to an existing <ul> when a button is clicked.
+2. Add a new list item - Write JavaScript to add a new 'li' to an existing <ul> when a button is clicked.
 
 3. Toggle dark mode - When the button is clicked, toggle the background color between black and white.
 
